@@ -1,0 +1,59 @@
+How to use the benchmark suite:
+
+1) Overview about available benchmarks
+#>java -cp dist/semqtree.jar org.semanticweb.bench.menu.Menu 
+  org.semanticweb.bench.Menu <benchmark>
+  where <benchmark> one of
+        StmtInsert   Benchmark the time to insert X stmt
+        Lookups      Benchmark the lookup time and quality for BGPs
+        WebFetch     TBD
+        GenerateBGP  Randomly select BGPs from data
+
+2)GenerateBGPs
+#>java -cp dist/semqtree.jar org.semanticweb.bench.menu.Menu GenerateBGPs 
+  usage: parameters:
+  -h          print help
+  -i <arg>    input location
+  -if <arg>   input format (idx, dir)
+  -is <arg>   number of estimated input stmts (estimation)
+  -o <arg>    output file
+  -p <arg>    Pattern for BGP (-1,0). -1 = variable, 0 = select, sperated
+             by ",", e.g. only predicates (-1,0,-1)
+  -s <arg>    number of patterns
+
+ Example
+ # Generate a sampling of 100 items for the BGP class ?var <p> <o>
+ # The sampling should be taken from files in the folder "input/linked-data" which contains around 110000 stms (this 
+ # is important to get a equal distributed sampling)
+ #>java -cp dist/semqtree.jar org.semanticweb.bench.menu.Menu GenerateBGPs -i input/linked-data/ -if dir -is 110000 -s 100 -p -1,0,0 -o input/100_po_bgps
+
+3)StmtInsert
+ #>java -cp dist/semqtree.jar org.semanticweb.bench.menu.Menu StmtInsert
+ usage: parameters:
+ -b <arg>    number of buckets [default 1000]
+ -f <arg>    fanout value [default 20]
+ -h          print help
+ -i <arg>    input location
+ -if <arg>   input format (idx, dir)
+ -o <arg>    output location
+ -s          serialise the create qtree (flag)
+ 
+ The output folder will contain time and used-memory measures and the relevant gnuplot files to generate some graphs
+ Example
+ #Insert all stmts from files in input/linked-data into a QTree with bucket size 10000 and fanout of 30, add the end serialise the QTree into the output folder
+ #>java -cp dist/semqtree.jar org.semanticweb.bench.menu.Menu StmtInsert -i input/linked-data/ -o tmp -f 30 -b 10000 -if dir -s 
+
+4)Lookups
+ #>java -cp dist/semqtree.jar org.semanticweb.bench.menu.Menu LookupsMissing required argument i/o/if!
+ -d <arg>    original data location
+ -h          print help
+ -i <arg>    qtree location
+ -if <arg>   input format of the original data(idx, dir)
+ -l <arg>    file containing new line seperated basic graph patterns
+ -o <arg>    output location
+
+ Output folder contains the time and quality measure for each BGP lookup and the average for all lookups
+ Example
+ #Test the 100 random selected BGPs for the created QTree. The data to verify how many sources were really required are taken from input/linked-data 
+ #>java -cp dist/semqtree.jar org.semanticweb.bench.menu.Menu Lookups -i tmp/_qtrees/qtree4all--hprefix_b10000_f30.ser -if dir -d input/linked-data/ -l input/100_spo_bgps -o tmp/
+  

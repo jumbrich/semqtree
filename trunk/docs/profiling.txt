@@ -1,0 +1,18 @@
+We use the profiling tool JIP [1]
+
+*LIBRARY
+  the library is located in the /library folder 
+
+*PROFIL PROPERTIES
+ the sample profiling properties are located at /evaluation/profile/*.properties
+
+*Profiling
+ add the followng 
+   -Dprofile.properties=evaluation/profiles\profile.properties
+ 
+ -> profiling results are stored to a file as specified in the properties file
+  see "file=profile.txt" default option in profile.properties
+
+
+
+[1]http://jiprof.sourceforge.net/

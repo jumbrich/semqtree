@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="ReaLiDy" basedir="." default="dist">
+  
+	<!-- CONSTANTS -->
+	<property name="PROJECT" value="realidy"/>
+	<property name="CORE" value="core"/>
+	<property name="VERSION" value="0.1"/>
+	<property name="DEV" value="dev"/>
+	
+	<!-- DIRECTORIES -->
+	<property name="lib.dir" value="libraries"/>  
+	<property name="dist.dir" value="dist"/>
+	<property name="build.dir" value="build"/>
+	<property name="src.dir" value="src"/>
+	<property name="webapp.dir" value="webapp"/>
+	<property name="webapps.libs" value="${webapp.dir}/libs" />
+
+  
+  
+  	<path id="classpath">
+		<fileset dir="${lib.dir}">
+			<include name="**/*.jar"/>
+			<exclude name="${junit.jar}"/>
+		</fileset>
+		<pathelement path="${java.class.path}"/>
+	</path>
+  	
+	<target name="clean">
+		<tstamp />
+		<echo>Cleaning up</echo>
+		  		
+		<delete dir="${dist.dir}"/>
+		<!--<delete dir="${webapp.dir}"/> -->
+		<delete dir="${build.dir}"/>
+	</target>
+  	<target name="prepare">
+  		<echo>Preparing directories</echo>
+  		<mkdir dir="${build.dir}"/>
+  		<mkdir dir="${dist.dir}"/>
+  		<mkdir dir="${webapps.libs}"/>
+  	</target>
+	  
+	<target name="copy">
+    	<copy file="src/hashing/ie/deri/urq/realidy/hashing/us/hash.dat" tofile="${build.dir}/ie/deri/urq/realidy/hashing/us/hash.dat"> </copy>
+    	<copy file="src/log4j.properties" tofile="${build.dir}/log4j.properties"> </copy>
+    	<copy file="src/hashing/ie/deri/urq/realidy/hashing/us/hash.ini" tofile="${build.dir}/ie/deri/urq/realidy/hashing/us/hash.ini"> </copy>
+  	</target>  
+
+	
+	<target name="core" depends="prepare,copy">
+	    	<javac destdir="${build.dir}"
+		   		srcdir="${src.dir}"
+		   		debug="yes">
+		      <classpath refid="classpath"/>
+	    	</javac>
+		<jar jarfile="${dist.dir}/${PROJECT}-${CORE}-${DEV}.jar" basedir="${build.dir}">
+		    <manifest>
+				<attribute name="Main-Class" value="ie.deri.urq.realidy.Main"/>
+			</manifest>
+		</jar>
+	</target>
+	
+	
+	
+	<target name="dist" depends="prepare,copy">
+    	<javac destdir="${build.dir}"
+	   		srcdir="${src.dir}"
+	   		debug="yes">
+	      <classpath refid="classpath"/>
+    	</javac>
+		<jar jarfile="${dist.dir}/${PROJECT}-${DEV}.jar" basedir="${build.dir}">
+    	  	<zipfileset src="libraries/yars2.1-trunk.jar"/>
+    	  	<zipfileset src="libraries/jdom.jar"/>
+    	  	<zipfileset src="libraries/multiarq.jar"/>
+			<zipfileset src="libraries/ldspider-0.1dev.jar"/>
+			<zipfileset src="libraries/semanticwebclient/log4j-1.2.12.jar"/>
+			<zipfileset src="libraries/jetty-server-7.0.1.v20091125.jar"/>
+			<zipfileset src="libraries/jetty-util-7.0.1.v20091125.jar"/>
+			<zipfileset src="libraries/jetty-webapp-7.0.1.v20091125.jar"/>
+			<zipfileset src="libraries/commons-math-1.2.jar"/>
+			<manifest>
+				<attribute name="Main-Class" value="ie.deri.urq.realidy.Main"/>
+      		</manifest>
+    	</jar>
+  	</target>
+  	
+  	<target name="war" depends="prepare,copy">
+    	<javac destdir="bin"
+	   		srcdir="src"
+	   		debug="yes">
+	      <classpath refid="classpath"/>
+    	</javac>
+    	
+    	<copy todir="webapp/libs" flatten="true">
+			<fileset dir=".">
+				<include name="libraries/*.jar"/>
+				<include name="libraries/**/*.jar"/>
+			</fileset>
+		</copy>
+		<copy file="src/log4j.properties" tofile="bin/log4j.properties"> </copy>
+    	<war destfile="dist/semqtree.war" 
+     		webxml="webapp/web.xml">
+                <webinf dir="webapp"  />
+                        <!--<fileset dir="webapp/jsp"/>-->
+                        <classes dir="bin"/>
+                        <lib dir="webapp/libs" />
+                </war>
+    	
+  	
+	</target>
+</project>

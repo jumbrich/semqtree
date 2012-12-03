@@ -1,0 +1,400 @@
+SELECT ?join1 ?join2 ?join3 ?join4 
+WHERE{
+  <http://identi.ca/user/58181> <http://www.w3.org/2000/01/rdf-schema#seeAlso> ?join1 .
+  ?join1 <http://xmlns.com/foaf/0.1/primaryTopic> ?join2 .
+  ?join2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?join3 .
+  ?join3 <http://www.w3.org/2000/01/rdf-schema#seeAlso> ?join4 .
+}
+
+SELECT ?join1 ?join2 ?join3 ?join4 
+WHERE{
+  <http://www.cs.rpi.edu/~hendler/foaf.rdf#tt0057012-jhendler> <http://www.purl.org/stuff/rev#reviewer> ?join1 .
+  ?join1 <http://xmlns.com/foaf/0.1/knows> ?join2 .
+  ?join2 <http://www.w3.org/2000/01/rdf-schema#seeAlso> ?join3 .
+  ?join3 <http://code.google.com/p/ldspider/ns#headerInfo> ?join4 .
+}
+
+SELECT ?join1 ?join2 ?join3 ?join4 
+WHERE{
+  <http://identi.ca/danja/foaf> <http://xmlns.com/foaf/0.1/maker> ?join1 .
+  ?join1 <http://www.w3.org/2000/01/rdf-schema#seeAlso> ?join2 .
+  ?join2 <http://xmlns.com/foaf/0.1/maker> ?join3 .
+  ?join3 <http://www.w3.org/2000/01/rdf-schema#seeAlso> ?join4 .
+}
+
+SELECT ?join1 ?join2 ?join3 ?join4 
+WHERE{
+  <http://www.umbrich.net/> <http://xmlns.com/foaf/0.1/maker> ?join1 .
+  ?join1 <http://xmlns.com/foaf/0.1/knows> ?join2 .
+  ?join2 <http://xmlns.com/foaf/0.1/knows> ?join3 .
+  ?join3 <http://xmlns.com/foaf/0.1/knows> ?join4 .
+}
+
+SELECT ?join1 ?join2 ?join3 ?join4 
+WHERE{
+  <http://identi.ca/user/15005#acct> <http://rdfs.org/sioc/ns#account_of> ?join1 .
+  ?join1 <http://www.w3.org/2000/01/rdf-schema#seeAlso> ?join2 .
+  ?join2 <http://xmlns.com/foaf/0.1/primaryTopic> ?join3 .
+  ?join3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?join4 .
+}
+
+SELECT ?join1 ?join2 ?join3 ?join4 
+WHERE{
+  <http://identi.ca/user/114> <http://www.w3.org/2000/01/rdf-schema#seeAlso> ?join1 .
+  ?join1 <http://xmlns.com/foaf/0.1/maker> ?join2 .
+  ?join2 <http://www.w3.org/2000/01/rdf-schema#seeAlso> ?join3 .
+  ?join3 <http://xmlns.com/foaf/0.1/maker> ?join4 .
+}
+
+SELECT ?join1 ?join2 ?join3 ?join4 
+WHERE{
+  <http://danbri.org/foaf.rdf> <http://xmlns.com/foaf/0.1/primaryTopic> ?join1 .
+  ?join1 <http://xmlns.com/foaf/0.1/knows> ?join2 .
+  ?join2 <http://xmlns.com/foaf/0.1/depiction> ?join3 .
+  ?join3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?join4 .
+}
+
+SELECT ?join1 ?join2 ?join3 ?join4 
+WHERE{
+  <http://identi.ca/user/125846#acct> <http://rdfs.org/sioc/ns#follows> ?join1 .
+  ?join1 <http://rdfs.org/sioc/ns#follows> ?join2 .
+  ?join2 <http://rdfs.org/sioc/ns#follows> ?join3 .
+  ?join3 <http://xmlns.com/foaf/0.1/accountServiceHomepage> ?join4 .
+}
+
+SELECT ?join1 ?join2 ?join3 ?join4 
+WHERE{
+  <http://kwarc.info/clange/foaf/> <http://xmlns.com/foaf/0.1/maker> ?join1 .
+  ?join1 <http://xmlns.com/foaf/0.1/knows> ?join2 .
+  ?join2 <http://xmlns.com/foaf/0.1/knows> ?join3 .
+  ?join3 <http://www.w3.org/2000/01/rdf-schema#seeAlso> ?join4 .
+}
+
+SELECT ?join1 ?join2 ?join3 ?join4 
+WHERE{
+  <http://identi.ca/banana/foaf> <http://xmlns.com/foaf/0.1/primaryTopic> ?join1 .
+  ?join1 <http://xmlns.com/foaf/0.1/holdsAccount> ?join2 .
+  ?join2 <http://rdfs.org/sioc/ns#account_of> ?join3 .
+  ?join3 <http://xmlns.com/foaf/0.1/holdsAccount> ?join4 .
+}
+
+SELECT ?join1 ?join2 ?join3 ?join4 
+WHERE{
+  <http://identi.ca/user/8563> <http://www.w3.org/2000/01/rdf-schema#seeAlso> ?join1 .
+  ?join1 <http://xmlns.com/foaf/0.1/maker> ?join2 .
+  ?join2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?join3 .
+  ?join3 <http://www.w3.org/2000/01/rdf-schema#seeAlso> ?join4 .
+}
+
+SELECT ?join1 ?join2 ?join3 ?join4 
+WHERE{
+  <http://identi.ca/user/44370> <http://xmlns.com/foaf/0.1/holdsAccount> ?join1 .
+  ?join1 <http://rdfs.org/sioc/ns#account_of> ?join2 .
+  ?join2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?join3 .
+  ?join3 <http://www.w3.org/2000/01/rdf-schema#seeAlso> ?join4 .
+}
+
+SELECT ?join1 ?join2 ?join3 ?join4 
+WHERE{
+  <http://identi.ca/user/16321> <http://www.w3.org/2000/01/rdf-schema#seeAlso> ?join1 .
+  ?join1 <http://xmlns.com/foaf/0.1/primaryTopic> ?join2 .
+  ?join2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?join3 .
+  ?join3 <http://www.w3.org/2000/01/rdf-schema#seeAlso> ?join4 .
+}
+
+SELECT ?join1 ?join2 ?join3 ?join4 
+WHERE{
+  _:http-3A-2F-2Fwww-2Eheimwege-2Ede-2Ffoaf-2Ffoaf-2Exml--bnode8 <http://purl.org/vocab/relationship/worksWith> ?join1 .
+  ?join1 <http://purl.org/vocab/relationship/closeFriendOf> ?join2 .
+  ?join2 <http://purl.org/vocab/relationship/closeFriendOf> ?join3 .
+  ?join3 <http://purl.org/vocab/relationship/closeFriendOf> ?join4 .
+}
+
+SELECT ?join1 ?join2 ?join3 ?join4 
+WHERE{
+  <http://identi.ca/user/12653> <http://xmlns.com/foaf/0.1/knows> ?join1 .
+  ?join1 <http://xmlns.com/foaf/0.1/holdsAccount> ?join2 .
+  ?join2 <http://rdfs.org/sioc/ns#follows> ?join3 .
+  ?join3 <http://xmlns.com/foaf/0.1/accountServiceHomepage> ?join4 .
+}
+
+SELECT ?join1 ?join2 ?join3 ?join4 
+WHERE{
+  _:http-3A-2F-2Fdanbri-2Eorg-2Ffoaf-2Erdf--bnode20 <http://xmlns.com/foaf/0.1/depiction> ?join1 .
+  ?join1 <http://purl.org/dc/elements/1.1/thumbnail> ?join2 .
+  ?join2 <http://purl.org/dc/elements/1.1/thumbnail> ?join3 .
+  ?join3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?join4 .
+}
+
+SELECT ?join1 ?join2 ?join3 ?join4 
+WHERE{
+  <http://identi.ca/user/45752#acct> <http://rdfs.org/sioc/ns#account_of> ?join1 .
+  ?join1 <http://xmlns.com/foaf/0.1/holdsAccount> ?join2 .
+  ?join2 <http://rdfs.org/sioc/ns#account_of> ?join3 .
+  ?join3 <http://xmlns.com/foaf/0.1/holdsAccount> ?join4 .
+}
+
+SELECT ?join1 ?join2 ?join3 ?join4 
+WHERE{
+  <http://identi.ca/jonphipps/foaf> <http://xmlns.com/foaf/0.1/primaryTopic> ?join1 .
+  ?join1 <http://www.w3.org/2000/01/rdf-schema#seeAlso> ?join2 .
+  ?join2 <http://xmlns.com/foaf/0.1/primaryTopic> ?join3 .
+  ?join3 <http://www.w3.org/2000/01/rdf-schema#seeAlso> ?join4 .
+}
+
+SELECT ?join1 ?join2 ?join3 ?join4 
+WHERE{
+  <http://identi.ca/user/15005> <http://www.w3.org/2000/01/rdf-schema#seeAlso> ?join1 .
+  ?join1 <http://xmlns.com/foaf/0.1/primaryTopic> ?join2 .
+  ?join2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?join3 .
+  ?join3 <http://www.w3.org/2000/01/rdf-schema#seeAlso> ?join4 .
+}
+
+SELECT ?join1 ?join2 ?join3 ?join4 
+WHERE{
+  <http://identi.ca/user/94153#acct> <http://rdfs.org/sioc/ns#account_of> ?join1 .
+  ?join1 <http://www.w3.org/2000/01/rdf-schema#seeAlso> ?join2 .
+  ?join2 <http://xmlns.com/foaf/0.1/primaryTopic> ?join3 .
+  ?join3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?join4 .
+}
+
+SELECT ?join1 ?join2 ?join3 ?join4 
+WHERE{
+  _:http-3A-2F-2Fxtrasgu-2Eorg-2Ffoaf-2Erdf--bnode37 <http://xmlns.com/foaf/0.1/img> ?join1 .
+  ?join1 <http://xmlns.com/foaf/0.1/maker> ?join2 .
+  ?join2 <http://xmlns.com/foaf/0.1/knows> ?join3 .
+  ?join3 <http://xmlns.com/foaf/0.1/holdsAccount> ?join4 .
+}
+
+SELECT ?join1 ?join2 ?join3 ?join4 
+WHERE{
+  <http://www.cs.umd.edu/~hendler/2003/foaf.rdf#tt0047478-jhendler> <http://www.purl.org/stuff/rev#reviewer> ?join1 .
+  ?join1 <http://xmlns.com/foaf/0.1/made> ?join2 .
+  ?join2 <http://www.purl.org/stuff/rev#reviewer> ?join3 .
+  ?join3 <http://xmlns.com/foaf/0.1/made> ?join4 .
+}
+
+SELECT ?join1 ?join2 ?join3 ?join4 
+WHERE{
+  <http://identi.ca/user/11721> <http://xmlns.com/foaf/0.1/holdsAccount> ?join1 .
+  ?join1 <http://rdfs.org/sioc/ns#follows> ?join2 .
+  ?join2 <http://rdfs.org/sioc/ns#follows> ?join3 .
+  ?join3 <http://xmlns.com/foaf/0.1/accountServiceHomepage> ?join4 .
+}
+
+SELECT ?join1 ?join2 ?join3 ?join4 
+WHERE{
+  <http://www.cs.rpi.edu/~hendler/foaf.rdf#tt0068646-jhendler> <http://www.purl.org/stuff/rev#reviewer> ?join1 .
+  ?join1 <http://xmlns.com/foaf/0.1/knows> ?join2 .
+  ?join2 <http://www.w3.org/2000/01/rdf-schema#seeAlso> ?join3 .
+  ?join3 <http://code.google.com/p/ldspider/ns#headerInfo> ?join4 .
+}
+
+SELECT ?join1 ?join2 ?join3 ?join4 
+WHERE{
+  <http://www.georgikobilarov.com/foaf.rdf#me> <http://xmlns.com/foaf/0.1/knows> ?join1 .
+  ?join1 <http://xmlns.com/foaf/0.1/knows> ?join2 .
+  ?join2 <http://www.w3.org/2000/01/rdf-schema#seeAlso> ?join3 .
+  ?join3 <http://www.w3.org/2000/01/rdf-schema#seeAlso> ?join4 .
+}
+
+SELECT ?join1 ?join2 ?join3 ?join4 
+WHERE{
+  <http://identi.ca/user/44035> <http://www.w3.org/2000/01/rdf-schema#seeAlso> ?join1 .
+  ?join1 <http://xmlns.com/foaf/0.1/primaryTopic> ?join2 .
+  ?join2 <http://www.w3.org/2000/01/rdf-schema#seeAlso> ?join3 .
+  ?join3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?join4 .
+}
+
+SELECT ?join1 ?join2 ?join3 ?join4 
+WHERE{
+  <http://www.cs.umd.edu/~hendler/2003/foaf.rdf#tt0061722-jhendler> <http://www.purl.org/stuff/rev#reviewer> ?join1 .
+  ?join1 <http://xmlns.com/foaf/0.1/made> ?join2 .
+  ?join2 <http://www.purl.org/stuff/rev#reviewer> ?join3 .
+  ?join3 <http://xmlns.com/foaf/0.1/made> ?join4 .
+}
+
+SELECT ?join1 ?join2 ?join3 ?join4 
+WHERE{
+  <http://kidehen.idehen.net/dataspace/person/kidehen#cert> <http://www.w3.org/ns/auth/cert#identity> ?join1 .
+  ?join1 <http://xmlns.com/foaf/0.1/made> ?join2 .
+  ?join2 <http://xmlns.com/foaf/0.1/maker> ?join3 .
+  ?join3 <http://xmlns.com/foaf/0.1/holdsAccount> ?join4 .
+}
+
+SELECT ?join1 ?join2 ?join3 ?join4 
+WHERE{
+  <http://kidehen.idehen.net/dataspace/kidehen/briefcase/Kingsley%20Uyi%20Idehen%27s%20Briefcase> <http://xmlns.com/foaf/0.1/maker> ?join1 .
+  ?join1 <http://xmlns.com/foaf/0.1/made> ?join2 .
+  ?join2 <http://xmlns.com/foaf/0.1/maker> ?join3 .
+  ?join3 <http://xmlns.com/foaf/0.1/holdsAccount> ?join4 .
+}
+
+SELECT ?join1 ?join2 ?join3 ?join4 
+WHERE{
+  <http://bigasterisk.com/foaf.rdf#drewp> <http://www.w3.org/2002/07/owl#sameAs> ?join1 .
+  ?join1 <http://www.w3.org/2000/01/rdf-schema#seeAlso> ?join2 .
+  ?join2 <http://xmlns.com/foaf/0.1/maker> ?join3 .
+  ?join3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?join4 .
+}
+
+SELECT ?join1 ?join2 ?join3 ?join4 
+WHERE{
+  <http://identi.ca/user/16989> <http://www.w3.org/2000/01/rdf-schema#seeAlso> ?join1 .
+  ?join1 <http://xmlns.com/foaf/0.1/primaryTopic> ?join2 .
+  ?join2 <http://www.w3.org/2000/01/rdf-schema#seeAlso> ?join3 .
+  ?join3 <http://xmlns.com/foaf/0.1/primaryTopic> ?join4 .
+}
+
+SELECT ?join1 ?join2 ?join3 ?join4 
+WHERE{
+  <http://ioctl.org/jan/test/wizard.jpg> <http://purl.org/dc/elements/1.1/thumbnail> ?join1 .
+  ?join1 <http://purl.org/dc/elements/1.1/thumbnail> ?join2 .
+  ?join2 <http://purl.org/dc/elements/1.1/thumbnail> ?join3 .
+  ?join3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?join4 .
+}
+
+SELECT ?join1 ?join2 ?join3 ?join4 
+WHERE{
+  <http://imdb.com/title/tt0043265/> <http://www.purl.org/stuff/rev#hasReview> ?join1 .
+  ?join1 <http://www.purl.org/stuff/rev#reviewer> ?join2 .
+  ?join2 <http://xmlns.com/foaf/0.1/knows> ?join3 .
+  ?join3 <http://www.w3.org/2000/01/rdf-schema#seeAlso> ?join4 .
+}
+
+SELECT ?join1 ?join2 ?join3 ?join4 
+WHERE{
+  <http://www.cs.umd.edu/~hendler/2003/foaf.rdf#tt0064115-jhendler> <http://www.purl.org/stuff/rev#reviewer> ?join1 .
+  ?join1 <http://xmlns.com/foaf/0.1/made> ?join2 .
+  ?join2 <http://www.purl.org/stuff/rev#reviewer> ?join3 .
+  ?join3 <http://xmlns.com/foaf/0.1/made> ?join4 .
+}
+
+SELECT ?join1 ?join2 ?join3 ?join4 
+WHERE{
+  <http://identi.ca/joker400/foaf> <http://xmlns.com/foaf/0.1/maker> ?join1 .
+  ?join1 <http://xmlns.com/foaf/0.1/holdsAccount> ?join2 .
+  ?join2 <http://rdfs.org/sioc/ns#account_of> ?join3 .
+  ?join3 <http://xmlns.com/foaf/0.1/holdsAccount> ?join4 .
+}
+
+SELECT ?join1 ?join2 ?join3 ?join4 
+WHERE{
+  <http://identi.ca/user/16321#acct> <http://rdfs.org/sioc/ns#account_of> ?join1 .
+  ?join1 <http://www.w3.org/2000/01/rdf-schema#seeAlso> ?join2 .
+  ?join2 <http://xmlns.com/foaf/0.1/primaryTopic> ?join3 .
+  ?join3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?join4 .
+}
+
+SELECT ?join1 ?join2 ?join3 ?join4 
+WHERE{
+  <http://imdb.com/title/tt0062622/> <http://www.purl.org/stuff/rev#hasReview> ?join1 .
+  ?join1 <http://www.purl.org/stuff/rev#reviewer> ?join2 .
+  ?join2 <http://xmlns.com/foaf/0.1/made> ?join3 .
+  ?join3 <http://www.purl.org/stuff/rev#reviewer> ?join4 .
+}
+
+SELECT ?join1 ?join2 ?join3 ?join4 
+WHERE{
+  <http://identi.ca/user/9669> <http://xmlns.com/foaf/0.1/knows> ?join1 .
+  ?join1 <http://xmlns.com/foaf/0.1/holdsAccount> ?join2 .
+  ?join2 <http://rdfs.org/sioc/ns#account_of> ?join3 .
+  ?join3 <http://xmlns.com/foaf/0.1/holdsAccount> ?join4 .
+}
+
+SELECT ?join1 ?join2 ?join3 ?join4 
+WHERE{
+  <http://rdf.freebase.com/ns/guid.9202a8c04000641f800000000aac854b> <http://rdf.freebase.com/ns/people.place_lived.person> ?join1 .
+  ?join1 <http://rdf.freebase.com/ns/people.person.places_lived> ?join2 .
+  ?join2 <http://rdf.freebase.com/ns/people.place_lived.person> ?join3 .
+  ?join3 <http://rdf.freebase.com/ns/people.person.gender> ?join4 .
+}
+
+SELECT ?join1 ?join2 ?join3 ?join4 
+WHERE{
+  <http://www.williamviker.net/rdf/foaf.rdf#me> <http://xmlns.com/foaf/0.1/img> ?join1 .
+  ?join1 <http://xmlns.com/foaf/0.1/primaryTopic> ?join2 .
+  ?join2 <http://purl.org/net/vocab/2004/07/visit#country> ?join3 .
+  ?join3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?join4 .
+}
+
+SELECT ?join1 ?join2 ?join3 ?join4 
+WHERE{
+  <http://kingsley.idehen.name/dataspace/kidehen/briefcase/Kingsley%20Uyi%20Idehen%27s%20Briefcase> <http://xmlns.com/foaf/0.1/maker> ?join1 .
+  ?join1 <http://xmlns.com/foaf/0.1/made> ?join2 .
+  ?join2 <http://xmlns.com/foaf/0.1/maker> ?join3 .
+  ?join3 <http://xmlns.com/foaf/0.1/holdsAccount> ?join4 .
+}
+
+SELECT ?join1 ?join2 ?join3 ?join4 
+WHERE{
+  <http://sebastian.dietzold.de/terms/project.wackofork> <http://xmlns.com/foaf/0.1/maker> ?join1 .
+  ?join1 <http://www.w3.org/2000/01/rdf-schema#seeAlso> ?join2 .
+  ?join2 <http://xmlns.com/foaf/0.1/maker> ?join3 .
+  ?join3 <http://purl.org/vocab/relationship/acquaintanceOf> ?join4 .
+}
+
+SELECT ?join1 ?join2 ?join3 ?join4 
+WHERE{
+  <http://identi.ca/user/65476> <http://xmlns.com/foaf/0.1/holdsAccount> ?join1 .
+  ?join1 <http://rdfs.org/sioc/ns#account_of> ?join2 .
+  ?join2 <http://xmlns.com/foaf/0.1/holdsAccount> ?join3 .
+  ?join3 <http://xmlns.com/foaf/0.1/accountServiceHomepage> ?join4 .
+}
+
+SELECT ?join1 ?join2 ?join3 ?join4 
+WHERE{
+  <http://identi.ca/user/6880> <http://www.w3.org/2000/01/rdf-schema#seeAlso> ?join1 .
+  ?join1 <http://xmlns.com/foaf/0.1/primaryTopic> ?join2 .
+  ?join2 <http://www.w3.org/2000/01/rdf-schema#seeAlso> ?join3 .
+  ?join3 <http://xmlns.com/foaf/0.1/primaryTopic> ?join4 .
+}
+
+SELECT ?join1 ?join2 ?join3 ?join4 
+WHERE{
+  _:http-3A-2F-2Fdavelevy-2Einfo-2Ffoaf-2Erdf--bnode0 <http://www.w3.org/2000/01/rdf-schema#seeAlso> ?join1 .
+  ?join1 <http://xmlns.com/foaf/0.1/knows> ?join2 .
+  ?join2 <http://xmlns.com/foaf/0.1/knows> ?join3 .
+  ?join3 <http://www.w3.org/2000/01/rdf-schema#seeAlso> ?join4 .
+}
+
+SELECT ?join1 ?join2 ?join3 ?join4 
+WHERE{
+  <http://www.ilrt.bristol.ac.uk/people/cmdjb/events/dc7/orig/eric.png> <http://purl.org/dc/elements/1.1/thumbnail> ?join1 .
+  ?join1 <http://purl.org/dc/elements/1.1/thumbnail> ?join2 .
+  ?join2 <http://purl.org/dc/elements/1.1/thumbnail> ?join3 .
+  ?join3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?join4 .
+}
+
+SELECT ?join1 ?join2 ?join3 ?join4 
+WHERE{
+  <http://www.johnbreslin.com/foaf/foaf.rdf> <http://www.w3.org/2000/01/rdf-schema#seeAlso> ?join1 .
+  ?join1 <http://www.w3.org/2000/01/rdf-schema#seeAlso> ?join2 .
+  ?join2 <http://www.w3.org/2000/01/rdf-schema#seeAlso> ?join3 .
+  ?join3 <http://www.w3.org/2000/01/rdf-schema#seeAlso> ?join4 .
+}
+
+SELECT ?join1 ?join2 ?join3 ?join4 
+WHERE{
+  _:http-3A-2F-2Fxtrasgu-2Eorg-2Ffoaf-2Erdf--bnode99 <http://xmlns.com/foaf/0.1/img> ?join1 .
+  ?join1 <http://xmlns.com/foaf/0.1/maker> ?join2 .
+  ?join2 <http://xmlns.com/foaf/0.1/knows> ?join3 .
+  ?join3 <http://xmlns.com/foaf/0.1/holdsAccount> ?join4 .
+}
+
+SELECT ?join1 ?join2 ?join3 ?join4 
+WHERE{
+  <http://xtrasgu.org/foaf.rdf#xtrasgu> <http://xmlns.com/foaf/0.1/homepage> ?join1 .
+  ?join1 <http://xmlns.com/foaf/0.1/maker> ?join2 .
+  ?join2 <http://xmlns.com/foaf/0.1/knows> ?join3 .
+  ?join3 <http://xmlns.com/foaf/0.1/holdsAccount> ?join4 .
+}
+
+SELECT ?join1 ?join2 ?join3 ?join4 
+WHERE{
+  <http://iandavis.com/id/paulmiller.rdf> <http://purl.org/dc/terms/hasFormat> ?join1 .
+  ?join1 <http://purl.org/dc/terms/isFormatOf> ?join2 .
+  ?join2 <http://purl.org/dc/terms/hasFormat> ?join3 .
+  ?join3 <http://xmlns.com/foaf/0.1/primaryTopic> ?join4 .
+}
+
